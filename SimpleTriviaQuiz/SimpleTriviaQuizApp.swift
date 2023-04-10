@@ -1,10 +1,3 @@
-//
-//  SimpleTriviaQuizApp.swift
-//  SimpleTriviaQuiz
-//
-//  Created by Neal Archival on 3/24/23.
-//
-
 import SwiftUI
 
 @main

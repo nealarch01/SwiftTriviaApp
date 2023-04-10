@@ -1,28 +1,5 @@
 import SwiftUI
 
-struct Trivia: Decodable {
-    var category: String
-    var type: String
-    var difficulty: String
-    var question: String
-    var correct_answer: String
-    var incorrect_answers: [String]
-    
-    init() {
-        category = "Geography"
-        type = "multiple"
-        difficulty = ""
-        question = "What is the capital of California?"
-        correct_answer = "Sacramento"
-        incorrect_answers = ["San Diego", "Los Angeles", "Irvine"]
-    }
-    
-    func getAnswers() -> [String] {
-        if type == "boolean" { return ["True", "False"] }
-        return (incorrect_answers + [correct_answer]).shuffled()
-    }
-}
-
 struct TriviaGame: View {
     @State var trivias: [Trivia] = SampleTrivias // Stores all the trivia data
     @State var isComplete: Bool = false // Indicates whether a question has already been answered
@@ -32,23 +9,45 @@ struct TriviaGame: View {
     @Environment(\.dismiss) var dismiss // Function that returns to the home screen
     
     var body: some View {
-        VStack(spacing: 20) {
-        }
+        Text("Hello, world!")
     } // body
     
-    // Score Screen
+    // MARK: -- UI Components
+    
+    // MARK: ScoreScreen
     @ViewBuilder
-    func ScoreView() -> some View {}
+    func ScoreView() -> some View {
+        
+    }
     
-    // Trivia Screen
+    // MARK: Trivia Screen
     @ViewBuilder
-    func TriviaView() -> some View {}
+    func TriviaView() -> some View {
+        
+    }
     
-    func checkAnswer(selected: String) {}
     
-    func reset() {}
+    // MARK: -- Game Logic
+    func checkAnswer(selected: String) {
+        if isComplete { return } // Do not allow re-answering
+        isComplete = true
+        if selected == trivias[current].correct_answer {
+            score += 1
+        }
+    }
     
-    func next() {}
+    func reset() {
+        isComplete = false
+        current = 0
+        score = 0
+    }
+    
+    func next() {
+        current += 1
+        if current >= trivias.count { return }
+        answers = trivias[current].getAnswers()
+        isComplete = false
+    }
 }
 
 struct TriviaGame_Previews: PreviewProvider {

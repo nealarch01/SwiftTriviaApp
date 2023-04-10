@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD92C13A29E49BB9000A8007 /* TriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD92C13929E49BB9000A8007 /* TriviaModel.swift */; };
 		BDAF08C529D3D1A4009B267B /* TriviaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAF08C429D3D1A3009B267B /* TriviaGame.swift */; };
 		BDC3904929CE169F009FFF7D /* SimpleTriviaQuizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3904829CE169F009FFF7D /* SimpleTriviaQuizApp.swift */; };
 		BDC3904B29CE169F009FFF7D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3904A29CE169F009FFF7D /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD92C13929E49BB9000A8007 /* TriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaModel.swift; sourceTree = "<group>"; };
 		BDAF08C429D3D1A3009B267B /* TriviaGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaGame.swift; sourceTree = "<group>"; };
 		BDC3904529CE169F009FFF7D /* SimpleTriviaQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTriviaQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC3904829CE169F009FFF7D /* SimpleTriviaQuizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTriviaQuizApp.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD92C13B29E49BCA000A8007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD92C13929E49BB9000A8007 /* TriviaModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BDC3903C29CE169F009FFF7D = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,7 @@
 				BDC3904C29CE16A0009FFF7D /* Assets.xcassets */,
 				BDC3904E29CE16A0009FFF7D /* Preview Content */,
 				BDAF08C429D3D1A3009B267B /* TriviaGame.swift */,
+				BD92C13B29E49BCA000A8007 /* Models */,
 				BDFC7BAA29DD266200EC262B /* Services.swift */,
 			);
 			path = SimpleTriviaQuiz;
@@ -162,6 +173,7 @@
 				BDC3904929CE169F009FFF7D /* SimpleTriviaQuizApp.swift in Sources */,
 				BDAF08C529D3D1A4009B267B /* TriviaGame.swift in Sources */,
 				BDFC7BAB29DD266200EC262B /* Services.swift in Sources */,
+				BD92C13A29E49BB9000A8007 /* TriviaModel.swift in Sources */,
 				BDFC7BAD29DD2C9E00EC262B /* SampleTrivias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
